@@ -37,6 +37,10 @@ nav{
     height: 100%;
 }
 
+.logo{
+    line-height: -20px;
+}
+
 nav > ul{
     height: 100%;
     display: flex;    
