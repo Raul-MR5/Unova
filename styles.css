@@ -5,9 +5,10 @@
 body{
     margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFFFF;
+    color: #000000;
     font-size: 14px;
     line-height: 20px;
+    background: #f9f9f9;
     
 }
 
@@ -15,6 +16,7 @@ body{
 
 header{
     background-color: #69A682;
+    color: #FFFFFF;
     position: fixed;
     width: 100%;
     top: 0;
@@ -68,6 +70,13 @@ nav > ul > li > a:hover{
     background: #CDDFD4;
     height: 35%;
     padding: 14px 2rem;
+}
+
+/* MAIN */
+
+main{
+    margin-top: 74px;
+    padding: 30px;
 }
 
 /* FOOTER */
