@@ -1,5 +1,6 @@
 *{
     text-decoration: none;
+    list-style: none;
 }
 
 body{
@@ -75,8 +76,39 @@ nav > ul > li > a:hover{
 /* MAIN */
 
 main{
-    margin-top: 74px;
-    padding: 30px;
+    margin: 120px;
+    
 }
 
+/* HOME */
+
+.container-home{
+    align-items: center;
+    
+}
+
+.slider-frame{
+    width: 900px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+}
+
+.slider-frame li{
+    width: 100%;
+}
+
+.slider-frame img{
+    width: 100%;
+}
+
+
 /* FOOTER */
+
+
