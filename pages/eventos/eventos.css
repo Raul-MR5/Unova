@@ -1,0 +1,164 @@
+/* eventos */
+
+.div-title{
+    margin: 20px;
+    text-align: center;
+}
+
+.title{
+    font-size: 58px;
+    font-style: italic;
+}
+
+/* .card{
+    padding: 20px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: var(--gap);
+    background: var(--entry);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 1px rgb(53 72 91 / 7%), 
+        0 2px 2px rgb(0 0 0 / 1%), 
+        0 4px 4px rgb(0 0 0 / 2%),  
+        0 10px 8px rgb(0 0 0 / 3%), 
+        0 15px 15px rgb(0 0 0 / 3%), 
+        0 30px 30px rgb(0 0 0 / 4%), 
+        0 70px 65px rgb(0 0 0 / 5%);
+} */
+
+
+
+
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-eventos{
+  position: relative;
+  display: grid;
+  grid-template-columns: 340px 340px 340px 340px 340px;
+  row-gap: 10px;
+}
+
+.container-eventos .card{
+  position: relative;
+  width: 300px;
+  height: 430px;
+  background-position: center;
+  background-size: contain;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container-eventos .card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.container-eventos .card:hover:before{
+  clip-path: circle(85% at 50% 120%);
+  background: #000000;
+  opacity: 70%;
+}
+
+.container-eventos .card .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container-eventos .card:hover .contentBx{
+  height: 170px;
+}
+
+.container-eventos .card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+
+.container-eventos .card .contentBx .size, .container-eventos .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container-eventos .card:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  /* transition-delay: 0.5s; */
+}
+
+.container-eventos .card .contentBx .size h3, .container-eventos .card .contentBx .color h3{
+  color: #CDDFD4;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container-eventos .card .contentBx .size span{
+  width: 50px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #CDDFD4;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-eventos .card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #CDDFD4;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.container-eventos .card .contentBx a:hover{
+  background-color: #9bdc28;
+  transition:height .5s ease-out 0s;
+}
+
+.container-eventos .card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  /* transition-delay: 0.75s; */
+  
+  
+}
