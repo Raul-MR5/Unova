@@ -1,6 +1,6 @@
 /* eventos */
 
-.div-title{
+/* .div-title{
     margin: 20px;
     text-align: center;
 }
@@ -8,7 +8,7 @@
 .title{
     font-size: 58px;
     font-style: italic;
-}
+} */
 
 /* .card{
     padding: 20px;
@@ -35,10 +35,10 @@
 
 
 
-*{
+/* *{
   font-family: 'Poppins', sans-serif;
-}
-
+} */
+/* 
 .container-eventos{
   position: relative;
   display: grid;
@@ -67,7 +67,7 @@
 }
 
 .container-eventos .card:hover:before{
-  clip-path: circle(85% at 50% 120%);
+  clip-path: polygon(0 57%, 100% 57%, 100% 100%, 0% 100%);
   background: #000000;
   opacity: 70%;
 }
@@ -83,7 +83,7 @@
 }
 
 .container-eventos .card:hover .contentBx{
-  height: 170px;
+  height: 145px;
 }
 
 .container-eventos .card .contentBx h2{
@@ -99,7 +99,8 @@
   justify-content: center;
   align-items: center;
   padding: 8px 20px;
-  transition: 0.5s;opacity: 0;
+  transition: 0.5s;
+  opacity: 0;
   visibility: hidden;
   padding-top: 0;
   padding-bottom: 0;
@@ -107,9 +108,9 @@
 
 .container-eventos .card:hover .contentBx .size{
   opacity: 1;
-  visibility: visible;
+  visibility: visible; */
   /* transition-delay: 0.5s; */
-}
+/* }
 
 .container-eventos .card .contentBx .size h3, .container-eventos .card .contentBx .color h3{
   color: #CDDFD4;
@@ -141,7 +142,7 @@
   padding: 10px 20px;
   background: #CDDFD4;
   border-radius: 4px;
-  margin-top: 10px;
+  margin-top: 30px;
   text-decoration: none;
   font-weight: 600;
   color: #111;
@@ -157,8 +158,6 @@
 
 .container-eventos .card:hover .contentBx a{
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0px); */
   /* transition-delay: 0.75s; */
-  
-  
-}
+/* } */
