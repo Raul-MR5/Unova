@@ -639,12 +639,27 @@ a{
 
 .div-title {
     margin: 20px;
+    margin-top: -60px;
     text-align: center;
 }
 
 .title {
     font-size: 58px;
     font-style: italic;
+}
+
+.h1-eventos {
+    margin-bottom: -70px;
+}
+
+.h1-eventos::after {
+    /* width: 1500px;
+    position: absolute; */
+    font-size: 25px;
+    content: ' >';
+    /* border-top: 1px solid #000;
+    right: 10%;
+    margin-top: 20px; */
 }
 
 .card {
