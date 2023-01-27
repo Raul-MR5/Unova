@@ -649,7 +649,7 @@ a{
 }
 
 .h1-eventos {
-    margin-bottom: -70px;
+    margin-top: 50px;
 }
 
 .h1-eventos::after {
@@ -660,6 +660,19 @@ a{
     /* border-top: 1px solid #000;
     right: 10%;
     margin-top: 20px; */
+}
+
+/* .h1-eventos a {
+    color: #000000;
+} */
+
+.a-eventos {
+    color: #000000;
+}
+
+.a-eventos::after {
+    font-size: 25px;
+    content: ' >';
 }
 
 .card {
