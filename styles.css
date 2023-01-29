@@ -166,13 +166,30 @@ main {
 /* HOME */
 
 .container-home {
-    padding: 0;
+    margin: -120px -190px 0 -190px;
+    /* margin: -80px -140px 0 -140px; */
     grid-template-columns: 50% 50%;
     position: relative;
     display: grid;
-    row-gap: 100px;
+    /* row-gap: 80px; */
 }
 
+.col-home {
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.col-home span {
+    padding: 15px;
+    text-align: justify;
+}
+
+.img-home {
+    width: 100%;
+    height: 100%;
+}
 
 /* 
 SLIDER 
@@ -298,7 +315,7 @@ SLIDER
     grid-column: 2 / 4;
     grid-row: 1;
 }
-
+*/
 *::-webkit-scrollbar {
     -webkit-appearance: none;
     background-color: var(--color1);
@@ -317,16 +334,14 @@ SLIDER
     height: 10px;
 }
 
-.news-scroll::-webkit-scrollbar-thumb {
-    background-color: #213343;
-    /* border-radius: 20px; 
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color3);
+    /* border-radius: 20px;*/
 }
 
-.news-scroll::-webkit-scrollbar-track {
+/* .news-scroll::-webkit-scrollbar-track {
     /* border-radius: 10px; 
-} 
-
-*/
+}  */
 
 
 /* FOOTER */
@@ -510,8 +525,8 @@ SLIDER
     transition: 0.3s ease-in-out;
     font-size: 16px;
     margin-top: 100px; */
-    /* margin-bottom: 100px; */
-    /* padding: var(--gap);
+/* margin-bottom: 100px; */
+/* padding: var(--gap);
     background: var(--entry);
     border-radius: 8px;
     box-shadow:
@@ -524,123 +539,123 @@ SLIDER
         0 70px 65px rgb(0 0 0 / 5%);
 } */
 
-.container-eventos{
-  position: relative;
-  display: grid;
-  grid-template-columns: 260px 260px 260px 260px 260px 260px;
-  row-gap: 10px;
+.container-eventos {
+    position: relative;
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px 260px 260px;
+    row-gap: 10px;
 }
 
-.container-eventos .card{
-  position: relative;
-  width: 220px;
-  height: 320px;
-  background-position: center;
-  background-size: contain;
-  border-radius: 20px;
-  overflow: hidden;
+.container-eventos .card {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.container-eventos .card:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s ease-in-out;
+.container-eventos .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
 }
 
-.container-eventos .card:hover:before{
-  clip-path: polygon(0 57%, 100% 57%, 100% 100%, 0% 100%);
-  background: var(--color4);
-  opacity: 90%;
+.container-eventos .card:hover:before {
+    clip-path: polygon(0 57%, 100% 57%, 100% 100%, 0% 100%);
+    background: var(--color4);
+    opacity: 90%;
 }
 
-.container-eventos .card .contentBx{
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  transition: 1s;
-  z-index: 10;
+.container-eventos .card .contentBx {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
 }
 
-.container-eventos .card:hover .contentBx{
-  height: 90px;
+.container-eventos .card:hover .contentBx {
+    height: 90px;
 }
 
-.container-eventos .card .contentBx h2{
-  position: relative;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color1);
-  margin: 0;
+.container-eventos .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color1);
+    margin: 0;
 }
 
-.container-eventos .card .contentBx .size{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 20px;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  padding-top: 0;
-  padding-bottom: 0;
+.container-eventos .card .contentBx .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.container-eventos .card:hover .contentBx .size{
-  opacity: 1;
-  visibility: visible;
+.container-eventos .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
 }
 
-.container-eventos .card .contentBx .size h3{
-  color: var(--color1);
-  font-weight: 300;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-right: 10px;
+.container-eventos .card .contentBx .size h3 {
+    color: var(--color1);
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
 }
 
-.container-eventos .card .contentBx .size span{
-  width: 50px;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
-  font-size: 12px;
-  display: inline-block;
-  color: var(--color2);
-  background: var(--color1);
-  margin: 0 5px;
-  transition: 0.5s;
-  color: var(--color2);
-  border-radius: 4px;
-  cursor: pointer;
+.container-eventos .card .contentBx .size span {
+    width: 50px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    display: inline-block;
+    color: var(--color2);
+    background: var(--color1);
+    margin: 0 5px;
+    transition: 0.5s;
+    color: var(--color2);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.container-eventos .card .contentBx a{
-  display: inline-block;
-  padding: 10px 20px;
-  background: var(--color1);
-  border-radius: 4px;
-  margin-top: 15px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--color2);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s;
+.container-eventos .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--color1);
+    border-radius: 4px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
 }
 
-.container-eventos .card .contentBx a:hover{
-  background-color: var(--color1);
-  transition:height .5s ease-out 0s;
+.container-eventos .card .contentBx a:hover {
+    background-color: var(--color1);
+    transition: height .5s ease-out 0s;
 }
 
-.container-eventos .card:hover .contentBx a{
-  opacity: 1;
-  transform: translateY(0px);
+.container-eventos .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
 }
