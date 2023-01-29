@@ -675,14 +675,14 @@ a{
     content: ' >';
 }
 
-.card {
+/* .card {
     padding: 20px;
     position: relative;
     transition: 0.3s ease-in-out;
     font-size: 16px;
-    margin-top: 100px;
+    margin-top: 100px; */
     /* margin-bottom: 100px; */
-    padding: var(--gap);
+    /* padding: var(--gap);
     background: var(--entry);
     border-radius: 8px;
     box-shadow:
@@ -693,19 +693,19 @@ a{
         0 15px 15px rgb(0 0 0 / 3%),
         0 30px 30px rgb(0 0 0 / 4%),
         0 70px 65px rgb(0 0 0 / 5%);
-}
+} */
 
 .container-eventos{
   position: relative;
   display: grid;
-  grid-template-columns: 340px 340px 340px 340px 340px;
+  grid-template-columns: 260px 260px 260px 260px 260px;
   row-gap: 10px;
 }
 
 .container-eventos .card{
   position: relative;
-  width: 300px;
-  height: 430px;
+  width: 200px;
+  height: 300px;
   background-position: center;
   background-size: contain;
   border-radius: 20px;
