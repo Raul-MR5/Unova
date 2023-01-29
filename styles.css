@@ -5,6 +5,7 @@
     --color2: #39444d;
     --color3: #8e877c;
     --color4: #607078;
+    --color5: #b6c7d6;
 
     text-decoration: none;
     list-style: none;
@@ -55,7 +56,7 @@ hr {
 }
 
 .header p {
-    color: rgb(213, 225, 222);
+    color: var(--color1);
 }
 
 nav {
@@ -259,7 +260,7 @@ main {
 }
 
 .selected :hover {
-    background: #CDDFD4;
+    background: var(--color1);
     border-radius: 8px;
     cursor: pointer;
 }
@@ -288,30 +289,30 @@ main {
     grid-row: 1;
 }
 
-.news-scroll::-webkit-scrollbar {
+*::-webkit-scrollbar {
     -webkit-appearance: none;
-    background-color: #516f90;
+    background-color: var(--color1);
 }
 
-.news-scroll::-webkit-scrollbar:vertical {
+*::-webkit-scrollbar:vertical {
     width: 10px;
 }
 
-.news-scroll::-webkit-scrollbar-button:increment,
-.news-scroll::-webkit-scrollbar-button {
+*::-webkit-scrollbar-button:increment,
+*::-webkit-scrollbar-button {
     display: none;
 }
 
-.news-scroll::-webkit-scrollbar:horizontal {
+*::-webkit-scrollbar:horizontal {
     height: 10px;
 }
 
-.news-scroll::-webkit-scrollbar-thumb {
-    background-color: #213343;
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color3);
     /* border-radius: 20px; */
 }
 
-.news-scroll::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     /* border-radius: 10px; */
 }
 
@@ -319,8 +320,8 @@ main {
 /* FOOTER */
 
 .footer {
-    background-color: #213343;
-    color: #fff;
+    background-color: var(--color2);
+    color: var(--color1);
 }
 
 .footer-copyright li {
@@ -352,8 +353,8 @@ main {
     width: 33%;
     position: absolute;
     content: '';
-    border-top: 1px solid #7691ad;
-    top: 50%;
+    border-top: 1px solid var(--color5);
+    top: 47%;
 }
 
 .footer-contact-links::before {
@@ -397,7 +398,7 @@ main {
 .footer-social li a .cl-icon {
     height: 23px;
     width: 26px;
-    fill: #b6c7d6;
+    fill: var(--color5);
 }
 
 .footer-bottom {
@@ -425,13 +426,12 @@ main {
 }
 
 .footer-logo p {
-    color: #516f90;
     font-size: 0.75rem;
     line-height: 1.67;
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 0.875em;
-    color: #b6c7d6;
+    color: var(--color5);
     margin-bottom: 8px;
 }
 
@@ -447,7 +447,7 @@ main {
 .footer-copyright ul>li::after {
     display: inline-block;
     font-size: 0.75em;
-    color: #7691ad;
+    color: var(--color5);
     position: absolute;
     content: '|';
     top: 29%;
@@ -461,7 +461,7 @@ main {
 .footer-copyright a {
     font-size: 0.875rem;
     font-weight: 600;
-    color: #fff;
+    color: var(--color1);
     text-decoration: underline;
 }
 
@@ -475,7 +475,7 @@ main {
 
 .title {
     font-size: 58px;
-    font-style: italic;
+    color: var(--color2);
 }
 
 .h1-eventos {
@@ -485,10 +485,11 @@ main {
 .h1-eventos::after {
     font-size: 25px;
     content: ' >';
+    color: var(--color2);
 }
 
 .a-eventos {
-    color: #000000;
+    color: var(--color2);
 }
 
 /* .card {
@@ -540,8 +541,8 @@ main {
 
 .container-eventos .card:hover:before{
   clip-path: polygon(0 57%, 100% 57%, 100% 100%, 0% 100%);
-  background: #000000;
-  opacity: 70%;
+  background: var(--color4);
+  opacity: 90%;
 }
 
 .container-eventos .card .contentBx{
@@ -562,7 +563,7 @@ main {
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #fff;
+  color: var(--color1);
   margin: 0;
 }
 
@@ -584,7 +585,7 @@ main {
 }
 
 .container-eventos .card .contentBx .size h3{
-  color: #CDDFD4;
+  color: var(--color1);
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -599,11 +600,11 @@ main {
   line-height: 26px;
   font-size: 12px;
   display: inline-block;
-  color: #111;
-  background: #CDDFD4;
+  color: var(--color2);
+  background: var(--color1);
   margin: 0 5px;
   transition: 0.5s;
-  color: #111;
+  color: var(--color2);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -611,19 +612,19 @@ main {
 .container-eventos .card .contentBx a{
   display: inline-block;
   padding: 10px 20px;
-  background: #CDDFD4;
+  background: var(--color1);
   border-radius: 4px;
   margin-top: 15px;
   text-decoration: none;
   font-weight: 600;
-  color: #111;
+  color: var(--color2);
   opacity: 0;
   transform: translateY(50px);
   transition: 0.5s;
 }
 
 .container-eventos .card .contentBx a:hover{
-  background-color: #9bdc28;
+  background-color: var(--color1);
   transition:height .5s ease-out 0s;
 }
 
