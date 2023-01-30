@@ -292,6 +292,10 @@ main {
     margin: 10px 0 20px 60px;
 }
 
+.button-prices a {
+    color: #f9f9f9;
+}
+
 .scale {
     transform: scale(1.2);
     box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
@@ -306,19 +310,29 @@ main {
 
 .table-home {
     width: 100%;
+    border-spacing: 20px;
     margin-top: 15px;
 }
 
-.table-home th {
+/* .table-home th {
     background-color: var(--color3);
+} */
+
+/* .table-home,
+th, */
+.table-home td {
+    align-content: center;
+    width: 14.28%;
+    height: 200px;
+    border: 1px solid var(--color2);
+    border-radius: 10px;
+    text-align: center;
 }
 
-.table-home,
-th,
-td {
-    border: 1px solid var(--color2);
-    border-collapse: collapse;
-    text-align: center;
+.table-home td img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 /* 
