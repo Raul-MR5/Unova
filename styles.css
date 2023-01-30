@@ -258,6 +258,8 @@ main {
     margin-left: 5%;
     width: 90%;
     height: 100%;
+    object-fit:  cover;
+
 }
 
 .separator-home {
@@ -591,6 +593,9 @@ SLIDER
     height: 23px;
     width: 26px;
     fill: var(--color5);
+}
+.footer-social li a .cl-icon:hover{
+    fill: var(--color3);
 }
 
 .footer-bottom {
