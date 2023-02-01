@@ -296,18 +296,19 @@ main {
     padding: 10px 0 0 0;
 }
 
-.deal span {
+.deal strong {
     display: block;
     text-align: center;
+    font-size: 20px;
 }
 
-.deal span:first-of-type {
+/* .deal span:first-of-type {
     font-size: 23px;
 }
 
 .deal span:last-of-type {
     font-size: 13px;
-}
+} */
 
 .promo .price {
     display: block;
