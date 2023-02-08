@@ -106,7 +106,7 @@ nav img {
     position: relative;
 }
 
-.nav-links ul li::after {
+.nav-links>ul>li::after {
     content: '';
     width: 0%;
     height: 3.5px;
@@ -124,6 +124,32 @@ nav img {
     color: var(--color1);
     text-decoration: none;
     font-size: 19px;
+}
+
+.nav-links li ul {
+    visibility: hidden;
+    margin-left: -12px;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s linear;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links li>ul>li::after {
+    content: '';
+    width: 0%;
+    height: 3.5px;
+    background: var(--color3);
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.nav-links li:hover>ul {
+    visibility: visible;
+    opacity: 1;
 }
 
 .text-box {
@@ -180,6 +206,51 @@ nav img {
     margin-top: 100px;
 }
 
+/* .dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown p {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+    border: 0.5px solid white;
+    background-color: var(--color4);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-content::before {
+    transition: 2.5s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: var(--color2);
+} */
+
 /* MAIN */
 
 main {
@@ -197,23 +268,6 @@ main {
     position: relative;
     display: grid; */
     /* row-gap: 80px; */
-}
-
-.intro-home {
-    align-items: center;
-}
-
-.intro-home h1 {
-    padding: 15px;
-    text-align: center;
-    color: var(--color2);
-}
-
-.intro-home p {
-    padding: 15px;
-    padding-top: 0;
-    text-align: center;
-    color: var(--color2);
 }
 
 .grid-home {
@@ -241,6 +295,20 @@ main {
     color: var(--color2);
 }
 
+.intro-home {
+    align-items: center;
+}
+
+/* .text-box {
+    width: 90%;
+    color: var(--color1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+} */
+
 .intro-home h1 {
     padding: 15px;
     text-align: center;
@@ -254,11 +322,40 @@ main {
     color: var(--color2);
 }
 
+/* .text-box p {
+    margin: 10px 0 40px;
+    font-size: 17px;
+    color: var(--color1);
+} */
+
+.intro-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color4);
+    border: 1px solid var(--color4);
+    padding: 12px 34px;
+    margin: 2.5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.intro-buton:hover {
+    border: 1px solid var(--color4);
+    color: var(--color1);
+    background: var(--color4);
+    transition: .7s;
+}
+
 .img-home {
     margin-left: 5%;
     width: 90%;
     height: 100%;
-    object-fit:  cover;
+    object-fit: cover;
 
 }
 
@@ -267,7 +364,7 @@ main {
     color: var(--color1);
     height: 100px;
     width: 1910px;
-    margin: 0 -190px;
+    margin: 20px -190px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -595,7 +692,8 @@ SLIDER
     width: 26px;
     fill: var(--color5);
 }
-.footer-social li a .cl-icon:hover{
+
+.footer-social li a .cl-icon:hover {
     fill: var(--color3);
 }
 
@@ -830,4 +928,294 @@ SLIDER
 .container-eventos .card:hover .contentBx a {
     opacity: 1;
     transform: translateY(0px);
+}
+
+
+
+/* //////////////////////////// */
+
+/* lightbox sin abrir */
+.lightbox {
+    display: none;
+}
+
+/* lightbox abierto */
+.lightbox:target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido de Lightbox */
+.lightbox figcaption {
+    width: 25rem;
+    position: relative;
+    padding: 1.5em;
+    background-color: lightpink;
+}
+
+/* Botón Cerrar */
+.lightbox .close {
+    position: relative;
+    display: block;
+}
+
+.lightbox .close::after {
+    right: -1rem;
+    top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    content: "×";
+    cursor: pointer;
+}
+
+/* superposición Lightbox */
+.lightbox .background::before {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    content: "";
+    cursor: default;
+}
+
+/* #modal-fotos {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all .5s;
+    z-index: 1000000;
+}
+
+#modal-fotos p {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#mostrar-fotos {
+    display: none;
+}
+
+#mostrar-fotos+label {
+    background: steelblue;
+    display: table;
+    margin: auto;
+    color: #fff;
+    line-height: 3;
+    padding: 0 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#mostrar-fotos+label:hover {
+    background: #38678f;
+}
+
+#mostrar-fotos:checked~#modal-fotos {
+    top: 0;
+}
+
+#cerrar-fotos {
+    display: none;
+}
+
+#cerrar-fotos+label {
+    display: none;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1000001;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: tomato;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+#cerrar-fotos:checked~#modal-fotos {
+    top: -100vh;
+} */
+
+/* #cerrar-fotos+label {
+    display: none;
+} */
+/* 
+#mostrar-fotos:checked~#cerrar-fotos+label {
+    display: block;
+}
+
+#cerrar-fotos:checked+label {
+    display: none;
+} */
+
+/* #mostrar-fotos:checked ~ #modal {
+    box-shadow: 0 0 0 3px orange;
+}
+
+ #modal { */
+/* background: rgba(0, 0, 0, 0.9);
+    color: #fff; */
+/* position: fixed;
+    top: -100vh; */
+/* left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all .5s; 
+}*/
+
+/* #modal p {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  #mostrar-modal {
+    display: none;
+  }
+  #mostrar-modal + label {
+    background: steelblue;
+    display: table;
+    margin: auto;
+    color: #fff;
+    line-height: 3;
+    padding: 0 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  #mostrar-modal + label:hover {
+    background: #38678f;
+  }
+  #mostrar-modal:checked ~ #modal {
+    top: 0;
+  } */
+
+/**/
+
+.container-slider {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    width: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.thumbnails {
+    display: flex;
+    /* flex-direction: row; */
+    line-height: 0;
+}
+
+.thumbnails li {
+    flex: auto;
+}
+
+.thumbnails a {
+    display: block;
+}
+
+.thumbnails img {
+    width: 280px;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.slides {
+    overflow: hidden;
+    /* width: 75vmin; */
+    height: 500px;
+}
+
+.slides li {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+}
+
+.slides img {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.slides li:target {
+    z-index: 3;
+    -webkit-animation: slide 1s 1;
+}
+
+.slides li:not(:target) {
+    -webkit-animation: hidden 1s 1;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hidden {
+    0% {
+        z-index: 2;
+    }
+
+    100% {
+        z-index: 2;
+    }
 }
