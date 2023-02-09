@@ -142,6 +142,7 @@ nav img {
 .sub-header .nav-links li ul {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .7);
     background-image: linear-gradient(rgba(57, 68, 77, 0.8), rgba(57, 68, 77, 0.8)), url(images/home/festival.jpg);
+    z-index: 1000000;
 }
 
 .nav-links li>ul>li::after {
@@ -260,7 +261,7 @@ nav img {
 
 /* MAIN */
 
-main {
+.main {
     margin: 120px;
     margin-bottom: 60px;
     padding: 0px 70px;
@@ -1238,4 +1239,168 @@ SLIDER
     100% {
         z-index: 2;
     }
+}
+
+
+/* DISCOVEREU */
+.mensaje-discovereu{
+    color: var(--color2);
+    display: flex;
+    text-align: center;
+    margin-top: -20px;
+    padding: 0 50px 15px 50px;
+}
+
+/* ABOUT US */
+.main-about {
+    margin: 120px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0px 70px;
+}
+
+.about {
+    position: relative;
+    padding: 6rem 0;
+    width: 1910px;
+    margin: 0 -190px;
+    background: var(--color1);
+}
+
+.pair {
+    background: var(--color3);
+}
+
+.container-about {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    position: relative;
+    width: 100%;
+
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 454px;
+    height: 454px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-text {
+    width: 43%;
+    padding: 0;
+    text-align: left;
+    color: var(--color2);
+}
+
+.pair-text {
+    color: var(--color1);
+}
+
+.about-text h2 {
+    font-size: 30px;
+    font-weight: 500;
+    clear: both;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin: 0 0 1.5rem;
+}
+
+.about-text-eyebrow {
+    color: var(--color2);
+    display: block;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 0.6666666667rem;
+}
+
+.about-text-text {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.4211em;
+}
+
+.about hr{ 
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%,100);
+    height: 454px;
+    width: 1px;
+    margin: 0;   
+}
+
+
+
+form{
+    background: var(--color1);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 2px;
+}
+
+form h3{
+    font-size: 25px;
+    color: var(--color2);
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form div {
+    display: flex;
+}
+
+form input, form textarea{
+    border: 1px solid var(--color2);
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: var(--color1);
+    font-size: 16px;
+}
+
+.nombre {
+    width: 80%;
+    margin-right: 14px;
+}
+
+.telefono {
+    width: 80%;
+}
+
+.correo {
+    width: 125%;
+}
+
+::placeholder { color: rgb(184, 179, 179); }
+
+form button{
+    padding: 15px;
+    background: var(--color1);
+    color: var(--color4);
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid var(--color2);
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0px 10px 14px;
+    border-radius: 0;
+    transition: .5s;
+}
+
+form button:hover{
+    color: var(--color1);
+    background-color: var(--color4);
 }
