@@ -47,8 +47,10 @@ body {
 /* HEADER */
 
 hr {
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-top: 30px;
+    border-top: 1px solid var(--color3);
+    /* margin-left: 6%;
+    margin-right: 6%; */
 }
 
 .home-title {
@@ -135,6 +137,11 @@ nav img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sub-header .nav-links li ul {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .7);
+    background-image: linear-gradient(rgba(57, 68, 77, 0.8), rgba(57, 68, 77, 0.8)), url(images/home/festival.jpg);
 }
 
 .nav-links li>ul>li::after {
@@ -316,10 +323,15 @@ main {
 }
 
 .intro-home p {
-    padding: 15px;
-    padding-top: 0;
+    padding: 0 50px 15px 50px;
     text-align: center;
     color: var(--color2);
+}
+
+.bono-texto {
+    margin-right: 70px;
+    /* text-align: center;
+    color: var(--color2); */
 }
 
 /* .text-box p {
@@ -937,11 +949,12 @@ SLIDER
 /* lightbox sin abrir */
 .lightbox {
     display: none;
+    z-index: 1000010;
 }
 
 /* lightbox abierto */
 .lightbox:target {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -956,7 +969,7 @@ SLIDER
     width: 25rem;
     position: relative;
     padding: 1.5em;
-    background-color: lightpink;
+    background-color: var(--color1);
 }
 
 /* Botón Cerrar */
@@ -975,15 +988,15 @@ SLIDER
     z-index: 1;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--color4);
     border-radius: 50%;
-    color: white;
+    color: var(--color1);
     content: "×";
     cursor: pointer;
 }
 
 /* superposición Lightbox */
-.lightbox .background::before {
+.lightbox .close::before {
     left: 0;
     top: 0;
     width: 100%;
@@ -1171,10 +1184,17 @@ SLIDER
     object-position: top;
 }
 
+.slides-back {
+    width: 25%;
+    background-color: var(--color2);
+    /* background-color: #332E33; */
+}
+
 .slides {
     overflow: hidden;
-    /* width: 75vmin; */
+    /* margin-left: 25%; */
     height: 500px;
+    width: 50%;
 }
 
 .slides li {
