@@ -186,6 +186,13 @@ nav img {
     font-size: 15px;
     cursor: pointer;
 }
+/* 
+.dis{
+    background-color: var(--color3);
+}
+.dis:hover{
+    background-color: inherit;
+} */
 
 .hero-buton:hover {
     border: 1px solid var(--color3);
