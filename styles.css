@@ -266,6 +266,9 @@ nav img {
     text-align: center;
     color: var(--color2);
 }
+.link-facebook{
+    color: var(--color3);
+}
 
 .bono-texto {
     margin-right: 70px;
